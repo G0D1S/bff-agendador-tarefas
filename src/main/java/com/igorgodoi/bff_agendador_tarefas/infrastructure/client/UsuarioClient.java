@@ -4,7 +4,7 @@ import com.igorgodoi.bff_agendador_tarefas.business.dto.EnderecoDTO;
 import com.igorgodoi.bff_agendador_tarefas.business.dto.TelefoneDTO;
 import com.igorgodoi.bff_agendador_tarefas.business.dto.UsuarioDTO;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.http.ResponseEntity;
+
 import org.springframework.web.bind.annotation.*;
 
 @FeignClient(name = "usuario", url = "${usuario.url}") // quando quiser apontar a url utiliza o "$" e aponta no application.properties
@@ -19,7 +19,7 @@ public interface UsuarioClient {
 
 
     @PostMapping ("/login")
-    public String login(@RequestBody UsuarioDTO usuarioDTO);
+    String login(@RequestBody UsuarioDTO usuarioDTO);
 
 
 
