@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.*;
 @FeignClient(name = "notificao", url = "${notificacao.url}") // quando quiser apontar a url utiliza o "$" e aponta no application.properties
 public interface EmailClient {
 
+    @PostMapping
     void enviarEmail(@RequestBody TarefasDTOResponse dto);
 
     }
